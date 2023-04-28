@@ -54,6 +54,7 @@ spec:
           destination: ${{ parameters.repoUrl | parseRepoUrl }}
           owner: ${{ parameters.owner }}
           component_id: ${{ parameters.name }}
+          project_name : ADOTEST
 
     - id: publish
       name: Publish
