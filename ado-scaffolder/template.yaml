@@ -97,7 +97,7 @@ spec:
       name: Register
       action: catalog:register
       input:
-        repoContentsUrl: ${{ steps.publish.output.repoContentsUrl }}
+        repoContentsUrl: https://dev.azure.com/${{ (parameters.repoUrl | parseRepoUrl)['organization'] }}/${{ (parameters.repoUrl | parseRepoUrl)['owner'] }}/_git/${{ parameters.name }}
         catalogInfoPath: "/catalog-info.yaml"
 
   output:
