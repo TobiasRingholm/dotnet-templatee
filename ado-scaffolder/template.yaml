@@ -5,7 +5,7 @@ metadata:
   title: Create Azure Pipeline Test
   description: Create Azure pipeline example
 spec:
-  owner: parfuemerie-douglas
+  owner: markcunningham
   type: service
 
   parameters:
@@ -97,7 +97,7 @@ spec:
       name: Register
       action: catalog:register
       input:
-        repoContentsUrl: ${{ parameters.repoUrl }}
+        repoContentsUrl: ${{ steps.publish.output.repoUrl }}
         catalogInfoPath: "/catalog-info.yaml"
 
   output:
