@@ -53,6 +53,7 @@ spec:
           name: ${{ parameters.name }}
           destination: ${{ parameters.repoUrl | parseRepoUrl }}
           owner: ${{ parameters.owner }}
+          component_id: ${{ parameters.name }}
 
     - id: publish
       name: Publish
