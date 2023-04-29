@@ -55,7 +55,7 @@ spec:
           project_name: ${{ parameters.project_name }}
           owner: ${{ parameters.owner }}
           destination: ${{ parameters.repoUrl | parseRepoUrl }}
-          http_port: 8080
+          http_port: 8081
 
     - id: publish
       name: Publish
