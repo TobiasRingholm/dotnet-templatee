@@ -5,7 +5,7 @@ metadata:
   title: Create Azure Pipeline Test
   description: Create Azure pipeline example
 spec:
-  owner: markcunninghamuk
+  owner: markcunningham
   type: service
 
   parameters:
@@ -42,8 +42,7 @@ spec:
           ui:options:
             allowedHosts:
               - dev.azure.com
-
- steps:
+  steps:
     - id: template
       name: Fetch Skeleton + Template
       action: fetch:template
