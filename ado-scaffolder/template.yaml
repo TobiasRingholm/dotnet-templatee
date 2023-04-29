@@ -43,18 +43,20 @@ spec:
             allowedHosts:
               - dev.azure.com
 
-  steps:
-    - id: fetch
-      name: Template Skeleton
+ steps:
+    - id: template
+      name: Fetch Skeleton + Template
       action: fetch:template
       input:
         url: ../skeleton
         values:
-          name: ${{ parameters.name }}
-          destination: ${{ parameters.repoUrl | parseRepoUrl }}
+          component_id: ${{ parameters.component_id }}
+          description: ${{ parameters.description }}
+          artifact_id: ${{ parameters.component_id }}
+          project_name: ${{ parameters.project_name }}
           owner: ${{ parameters.owner }}
-          component_id: ${{ parameters.name }}
-          project_name : ADOTEST
+          destination: ${{ parameters.repoUrl | parseRepoUrl }}
+          http_port: 8080
 
     - id: publish
       name: Publish
