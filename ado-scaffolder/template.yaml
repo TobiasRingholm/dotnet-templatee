@@ -49,10 +49,10 @@ spec:
       input:
         url: ../skeleton
         values:
-          component_id: ${{ parameters.project_name }}
+          component_id: ${{ parameters.name }}
           description: ${{ parameters.description }}
           artifact_id: ${{ parameters.component_id }}
-          project_name: ${{ parameters.project_name }}
+          project_name: ${{ parameters.name }}
           owner: ${{ parameters.owner }}
           destination: ${{ parameters.repoUrl | parseRepoUrl }}
           http_port: 8081
