@@ -5,7 +5,7 @@ metadata:
   title: Create Azure Pipeline Test
   description: Create Azure pipeline example
 spec:
-  owner: markcunningham
+  owner: markcunninghamuk
   type: service
 
   parameters:
