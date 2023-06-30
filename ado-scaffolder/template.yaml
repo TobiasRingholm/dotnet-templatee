@@ -13,11 +13,18 @@ spec:
       required:
         - name
         - owner
+        - repoName
       properties:
         name:
           title: Project name
           type: string
           description: Choose a unique project name.
+          ui:field: EntityNamePicker
+          ui:autofocus: true
+        pipelineName:
+          title: Pipeline name
+          type: string
+          description: Choose a unique pipeline name.
           ui:field: EntityNamePicker
           ui:autofocus: true
         owner:
@@ -72,7 +79,7 @@ spec:
         organization: ${{ (parameters.repoUrl | parseRepoUrl)['organization'] }}
         project: ${{ (parameters.repoUrl | parseRepoUrl)['owner'] }}
         folder: "my-azure-pipelines-folder"
-        name: ${{ parameters.name }}
+        name: ${{ parameters.pipelineName }}
         repositoryId: ${{ steps.publish.output.repositoryId }}
         repositoryName: ${{ (parameters.repoUrl | parseRepoUrl)['repo'] }}
         yamlPath: <optional value to your azure pipelines yaml file, defaults to ./azure-pipelines.yaml>
