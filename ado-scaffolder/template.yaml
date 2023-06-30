@@ -13,14 +13,13 @@ spec:
       required:
         - name
         - owner
-        - repoName
       properties:
         name:
           title: Project name
           type: string
           description: Choose a unique project name.
           ui:field: EntityNamePicker
-          ui:autofocus: true       
+          ui:autofocus: true
         owner:
           title: Owner
           type: string
