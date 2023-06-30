@@ -13,7 +13,12 @@ spec:
       required:
         - name
         - owner
+        - pipelineName
       properties:
+        pipelineName:
+          title: Pipeline name
+          type: string
+          description: Choose a unique Pipeline name.
         name:
           title: Project name
           type: string
