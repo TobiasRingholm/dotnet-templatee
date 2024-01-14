@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: dotnet-templatee
+  annotations:
+    github.com/project-slug: TobiasRingholm/dotnet-templatee
+spec:
+  type: other
+  lifecycle: unknown
+  owner: Tobias
